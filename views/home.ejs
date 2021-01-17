@@ -1,0 +1,103 @@
+<html>
+
+    <head>
+            <!-- Tittle of the Page -->
+        <title>
+            
+            <%= tittle %>
+
+        </title>
+            <!-- CSS file linked to style the page -->
+        <link rel="stylesheet" href="/css/home.css">
+
+    </head>
+
+    <body>
+
+        <h1 id="app-name">TODO APP</h1>
+
+            <!-- form to create task -->
+        <form action="/create-task" method="POST">
+
+                <!-- form container -->
+            <div id="create-task-container">
+
+                    <!-- description box -->
+                <div id="description">
+
+                    ADD DESCRIPTION<br>
+                    <textarea name="description" cols="30" rows="13" placeholder="What do you need to do?" required></textarea>
+
+                </div>
+
+                    <!-- category box -->
+                <div id="category">
+
+                    CATEGORY<br>Choose a category
+
+                    <select name="category" required>
+
+                        <option>PERSONAL</option>
+                        <option>WORK</option>
+                        <option>SCHOOL</option>
+                        <option>CLEANING</option>
+                        <option>OTHER</option>
+
+                    </select>
+
+                </div>
+
+                    <!-- due-date box -->
+                <div id="date">
+
+                    DUE DATE<br>
+                    <input type="date" name="date" required>
+
+                </div>
+                
+                <!-- button to create task -->
+            <div class="buttons">
+                
+                    <input type="submit" id="add" value="ADD TASK">
+        
+            </div>
+
+        </div>
+
+        </form>
+        
+                <!-- added tasks list container -->
+            <div id="task-container">
+                  
+                <h1 id="list-heading">TASKS LIST</h1>
+
+                <form action="/delete-task" method="GET">
+                    
+                        <% for(let i of task) { %>
+                            
+                                <!-- added tasks list -->
+                            <div id="tasks-list">
+
+                                <input type="checkbox" name="<%= i._id %>" >
+                                <p id="task-description"><%= i.description %></p>
+                                <p id="task-category">Category: <%= i.category %></p>
+                                <p id="due-date">Due Date: <%= i.date %></p>
+
+                            </div>
+
+                        <% } %>
+                            
+                            <!-- button to delete tasks -->
+                        <div class="buttons">
+
+                            <input type="submit" id="delete" value="DELETE TASK">
+
+                        </div>  
+    
+                </form>
+
+            </div>
+        
+    </body>
+    
+</html>

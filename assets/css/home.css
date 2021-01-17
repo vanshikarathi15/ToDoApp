@@ -1,0 +1,241 @@
+body{
+
+    height: 100%;
+    width:100%;
+    margin: 0;
+    font-size: large;
+    background-image: url(../images/background.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+    /* app name */
+#app-name{
+
+    top:0;
+    left: 40%;
+    position: fixed;
+    text-align: center;
+    color: white;
+
+}
+
+    /* container div to create task */
+#create-task-container{
+
+    top:12%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: fixed;
+
+}
+
+    /* container div to add task description */ 
+#description{
+
+    display: inline-block;
+    width:30%;
+    height: 250px;
+    text-align: center;
+    background-image: url(../images/description-background.jpg);
+    border-radius: 10%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+    /* textarea for task description */ 
+#description textarea{
+
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-top: 5px;
+    color: white;
+
+}
+
+    /* container div to select category */
+#category{
+
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    width:30%;
+    height: 250px;
+    background-image:url(../images/category-background.jpg);
+    border-radius: 10%;
+    align-items: center;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+    /* dropdown list to select category */
+#category select{
+
+    margin-top: 40px;
+    background-color: transparent;
+    border: none;
+    color:white;
+    width: 60%;
+    
+}
+
+
+#category select option{
+
+    background-color: transparent;
+    border: none;
+    color:black;
+
+}
+
+    /* container div for Due-Date */
+#date{
+
+    text-align: center;
+    display:inline-flex;
+    flex-direction: column;
+    width:30%;
+    height: 250px;
+    background-image:url(../images/date-background.jpg);
+    border-radius: 10%;
+    align-items: center;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+    /* input to select date */
+#date input{
+
+    background-color: transparent;
+    border: none;
+    margin-top:50px;
+    color: white;
+
+}
+
+    /* common style given to ADD and DELETE button */
+.buttons{
+
+    margin-top:20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+    /* ADD button */
+#add{
+
+    width: 150px;
+    height:40px;
+    
+    border:none;
+
+}
+
+
+#add:hover{
+
+    background-color:cyan;
+
+}
+
+    /* added tasks container div */
+#task-container{
+
+    position: absolute;
+    top: 93vh;
+    width: 100%;
+    background-image: url(../images/task-list-background.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+    /* Task List heading */
+#list-heading{
+
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: #A86D40;
+
+}
+
+    /* button to delete tasks */
+#delete{
+
+    width: 150px;
+    height:40px;
+    border:none;
+    margin-bottom: 20px;
+
+}
+
+
+#delete:hover{
+
+    background-color: red;
+
+}
+
+    /* added tasks list */
+#tasks-list{
+
+    margin-left:30px;
+    margin-right: 20px;
+    border-bottom: 1px solid white;
+
+}
+
+    /* checkbox to select the tasks for deletion */
+#tasks-list input{
+
+    display: inline-block;
+
+}
+
+
+#task-description{
+
+    display: inline-block;
+    font-size: x-large; 
+    line-height: 0px; 
+
+}
+
+
+#task-category{
+
+    font-size: small;
+
+}
+
+
+#due-date{
+
+    font-size: small;
+
+}
+
+    /* styling on hover */
+#tasks-list:hover{
+
+    color: #A86D40;
+
+}
